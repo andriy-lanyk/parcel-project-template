@@ -12,8 +12,13 @@
     />
   </head>
   <body>
-    <!-- Так добавляются фрагменты в главные HTML-файлы страниц. -->
-    <include src="./partials/example.html"></include>
+    <a class="open_modal" href="#open">Открыть окно</a>
+    <div id="modal" class="modal bounceIn">
+      <div id="close_modal">+</div>
+      <div class="modal_txt">
+        Ну что, понравился сайт!? Хочешь научиться такому же!? Тогда записывайся на курсы в GoIT!
+      </div>
+    </div>
 
     <!-- Скрипт идёт последним в разметке. В нём уже подключен главный SASS-файл. -->
     <script src="./index.js"></script>
