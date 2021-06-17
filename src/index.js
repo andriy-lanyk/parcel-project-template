@@ -5,7 +5,6 @@ import debounce from 'lodash.debounce';
 
 let open_modal = document.querySelectorAll('.open_modal');
 let close_modal = document.getElementById('close_modal');
-console.log('close_modal: ', close_modal);
 let modal = document.getElementById('modal');
 let body = document.getElementsByTagName('body')[0];
 let modalText = document.querySelector('.modal_txt');
@@ -47,23 +46,19 @@ function openModalWindowWithTimer(e) {
     }
     if (counter === 1) {
       text =
-        '<p class="modal-first-paragraph">Смелее! Создай свою историю успеха! Быстрее записывайся на курсы GoIT! Если тебе не нравиться FrontEnd, можно выбрать другую сферу деятельности на любой вкус.</p><label class="modal-first-paragraph" for="name">Я даже могу тебе помочь. Введи своё имя:</label><input type="text" id="name" name="name" size="20"><button class="modal-button" type="submit">Отправить</button>';
+        '<p class="modal-first-paragraph">Смелее! Создай свою историю успеха! Быстрее записывайся на курсы GoIT! Если тебе не нравиться FrontEnd, можно выбрать другую сферу деятельности на любой вкус.</p><label class="modal-first-paragraph" for="name">Я даже могу тебе помочь. Введи своё имя:</label><input type="text" id="name" name="name" size="18"><button class="modal-button" type="submit">Отправить</button>';
       openModalWindowSecond(text);
       const modalInput = document.querySelector('#name');
-      console.log('modalInput: ', modalInput);
       modalInput.addEventListener('input', queryName);
       const buttonModal = document.querySelector('.modal-button');
-      console.log('buttonModal: ', buttonModal);
       buttonModal.addEventListener('click', renderModal);
     } else if (counter > 1) {
       text =
-        '<p class="modal-first-paragraph">Я решительно настроен тебе помочь. И не успокоюсь, пока ты не отправишь данные своего имени</p><label for="name">Укажи имя в этом поле:</label><input type="text" id="name" name="name" size="20"><button class="modal-button" type="submit">Отправить</button>';
+        '<p class="modal-first-paragraph">Я решительно настроен тебе помочь. И не успокоюсь, пока ты не отправишь данные своего имени</p><label for="name">Укажи имя в этом поле:</label><input type="text" id="name" name="name" size="18"><button class="modal-button" type="submit">Отправить</button>';
       openModalWindowSecond(text);
       const modalInput = document.querySelector('#name');
-      console.log('modalInput: ', modalInput);
       modalInput.addEventListener('input', queryName);
       const buttonModal = document.querySelector('.modal-button');
-      console.log('buttonModal: ', buttonModal);
       buttonModal.addEventListener('click', renderModal);
     }
   }
@@ -87,23 +82,19 @@ function renderModal() {
     // enteredName = '';
   } else if (enteredName.trim() === '') {
     text =
-      '<p class="modal-first-paragraph">Хорошая попытка, но я не отстану, пока Вы не введёте своё имя...</p><label for="name">Имя нужно указать здесь:</label><input type="text" id="name" name="name" size="20"><button class="modal-button" type="submit">Отправить</button>';
+      '<p class="modal-first-paragraph">Хорошая попытка, но я не отстану, пока ты не введёшь своё имя...</p><label for="name">Имя нужно указать здесь:</label><input type="text" id="name" name="name" size="18"><button class="modal-button" type="submit">Отправить</button>';
     openModalWindowSecond(text);
     const modalInput = document.querySelector('#name');
-    console.log('modalInput: ', modalInput);
     modalInput.addEventListener('input', queryName);
     const buttonModal = document.querySelector('.modal-button');
-    console.log('buttonModal: ', buttonModal);
     buttonModal.addEventListener('click', renderModal);
   } else if (enteredName.trim().length === 1) {
     text =
-      '<p class = "modal-first-paragraph">Не думаю, что Ваше имя состоит с одного символа )))</p><label for="name">Имя нужно указать здесь:</label><input type="text" id="name" name="name" size="20"><button class="modal-button" type="submit">Отправить</button>';
+      '<p class = "modal-first-paragraph">Не думаю, что твоё имя состоит с одного символа. Давай ещё раз.</p><label for="name">Имя нужно указать здесь:</label><input type="text" id="name" name="name" size="18"><button class="modal-button" type="submit">Отправить</button>';
     openModalWindowSecond(text);
     const modalInput = document.querySelector('#name');
-    console.log('modalInput: ', modalInput);
     modalInput.addEventListener('input', queryName);
     const buttonModal = document.querySelector('.modal-button');
-    console.log('buttonModal: ', buttonModal);
     buttonModal.addEventListener('click', renderModal);
   }
 }
@@ -116,12 +107,12 @@ function openModalWindowSecond(text) {
 }
 
 function renderOk() {
-  modalText.innerHTML = '<p>Сейчас проверим, настоящее Вы ввели имя или нет...</p>';
+  modalText.innerHTML = '<p>Сейчас проверим, своё ты ввёл имя или нет...</p>';
 }
 
 function renderComp() {
   modalText.innerHTML =
-    '<p>На самом деле я только что получил доступ к Вашему компьютеру. Ищу данные банковской карты...</p>';
+    '<p>На самом деле я только что получил доступ к твоему компьютеру. Ищу данные банковской карты...</p>';
 }
 
 function renderPhoto() {
@@ -131,12 +122,12 @@ function renderPhoto() {
 
 function renderText() {
   modalText.innerHTML =
-    '<p>Результат определения личности по фотографии:</p><img class="modal-photo" src="https://scontent.fiev19-1.fna.fbcdn.net/v/t1.6435-9/fr/cp0/e15/q65/60248006_2181999468521956_492403444842233856_n.jpg?_nc_cat=102&ccb=1-3&_nc_sid=7aed08&efg=eyJpIjoidCJ9&_nc_ohc=cyGLcmoKX9IAX-VMeW1&_nc_ht=scontent.fiev19-1.fna&tp=14&oh=784a4bdad518cce57586510f8d7871a7&oe=60CFDD36">';
+    '<p>Результат определения пользователя по фотографии:</p><img class="modal-photo" src="https://scontent.fiev19-1.fna.fbcdn.net/v/t1.6435-9/fr/cp0/e15/q65/60248006_2181999468521956_492403444842233856_n.jpg?_nc_cat=102&ccb=1-3&_nc_sid=7aed08&efg=eyJpIjoidCJ9&_nc_ohc=cyGLcmoKX9IAX-VMeW1&_nc_ht=scontent.fiev19-1.fna&tp=14&oh=784a4bdad518cce57586510f8d7871a7&oe=60CFDD36">';
 }
 
 function addApology() {
   modalText.insertAdjacentHTML(
     'beforeend',
-    '<p>Ой, Алёна, это Вы!? Извините, я Вас сразу не узнал... Можете закрывать надоедалку, она больше не появится. Надеюсь, эта маленькая шутка не повлияет на общее впечатление от нашей работы? )))</p>',
+    '<p>Ой, Алёна, это Вы!? Извините, я Вас сразу не узнал... Можете закрывать надоедалку, она больше не появится. Надеюсь, эта маленькая шутка не повлияет на общее впечатление от проекта!? )))</p>',
   );
 }

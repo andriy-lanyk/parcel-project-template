@@ -3,6 +3,10 @@ p {
   padding: 0;
 }
 
+input {
+  margin-right: 10px;
+}
+
 .modal {
   display: none;
   background: #ff6b08;
@@ -74,11 +78,20 @@ p {
   margin: 20px auto;
 }
 
+.modal-button {
+  padding: 5px 5px 3px;
+  // height: 40px;
+  background: #ff6b01;
+  border-radius: 5px;
+  color: #fff;
+  font-size: 20px;
+}
+
 #close_modal.modal-hidden {
   display: none;
 }
 
-@charset "UTF-8";
+// @charset "UTF-8";
 
 /*!
  * animate.css -http://daneden.me/animate
