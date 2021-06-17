@@ -1,3 +1,8 @@
+p {
+  margin: 0;
+  padding: 0;
+}
+
 .modal {
   display: none;
   background: #ff6b08;
@@ -6,7 +11,7 @@
   left: 0;
   bottom: 0;
   right: 0;
-  z-index: 99999;
+  z-index: 99998;
 }
 .modal_vis {
   display: block;
@@ -42,17 +47,35 @@
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2), 0 16px 20px rgba(0, 0, 0, 0.2);
   background: #fff;
   padding: 30px;
-  margin: 100px auto;
+  margin: 50px auto;
   max-width: 800px;
+  max-height: 90vh;
   text-align: center;
   font-size: 24px;
   font-weight: 600;
+  line-height: 1.5;
+}
+
+.modal-first-paragraph {
+  margin-bottom: 20px;
 }
 
 .modal-photo {
   display: block;
-  width: 100px;
-  height: 100px;
+  width: 50%;
+  height: 50%;
+  margin: 20px auto;
+}
+
+.modal-photo-start {
+  display: block;
+  width: 75%;
+  height: 75%;
+  margin: 20px auto;
+}
+
+#close_modal.modal-hidden {
+  display: none;
 }
 
 @charset "UTF-8";
