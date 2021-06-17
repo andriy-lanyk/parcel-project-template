@@ -107,17 +107,18 @@ function openModalWindowSecond(text) {
 }
 
 function renderOk() {
-  modalText.innerHTML = '<p>Сейчас проверим, своё ты ввёл имя или нет...</p>';
+  modalText.innerHTML =
+    '<p>Сейчас проверим, своё ты ввёл имя или нет...</p><img class="modal-photo" src="https://cdn.falauniversidades.com.br/wp-content/uploads/2020/06/17122042/Anonymous.jpg">';
 }
 
 function renderComp() {
   modalText.innerHTML =
-    '<p>На самом деле я только что получил доступ к твоему компьютеру. Ищу данные банковской карты...</p>';
+    '<p>На самом деле я только что получил доступ к твоему компьютеру. Ищу данные банковской карты...</p><img class="modal-photo" src="https://cdn.falauniversidades.com.br/wp-content/uploads/2020/06/17122042/Anonymous.jpg">';
 }
 
 function renderPhoto() {
   modalText.innerHTML =
-    '<p>Вау! Тут ещё и фотки есть! Сейчас посмотрим. Так-так-так, и что тут интересного...</p>';
+    '<p>Вау! Тут ещё и фотки есть! Сейчас посмотрим. Так-так-так, и что тут интересного...</p><img class="modal-photo" src="https://cdn.falauniversidades.com.br/wp-content/uploads/2020/06/17122042/Anonymous.jpg">';
 }
 
 function renderText() {
