@@ -1,6 +1,6 @@
 import './sass/main.scss';
 import debounce from 'lodash.debounce';
-// import one from './js/partOne.js';
+// import one from './js/modalExample.js';
 // import two from './js/partTwo.js';
 
 let open_modal = document.querySelectorAll('.open_modal');
@@ -132,3 +132,22 @@ function addApology() {
     '<p>Ой, Алёна, это Вы!? Извините, я Вас сразу не узнал... Можете закрывать надоедалку, она больше не появится. Надеюсь, эта маленькая шутка не повлияет на общее впечатление от проекта!? )))</p>',
   );
 }
+
+// ДЛЯ МОДАЛКИ ПРИМЕР
+const sliceArray = document.querySelectorAll('.slices .slice');
+sliceArray.forEach(elem => {
+  elem.style.backgroundImage =
+    'url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSzCrMaBv3K1YucqEzGV5uC3tTsTY8OPknVFw&usqp=CAU")';
+  // elem.style.backgroundPosition = 'center';
+  // elem.style.backgroundSize = 'center';
+  // elem.style.backgroundRepeat = 'no-repeat';
+});
+
+const slices = document.querySelectorAll('.slices');
+slices.forEach(elem => {
+  elem.style.backgroundImage =
+    'url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTDMX-4NdBezdSyY8yWR6sCERsGRWi4izTc2A&usqp=CAU")';
+  // elem.style.backgroundPosition = 'center';
+  // elem.style.backgroundSize = 'center';
+  // elem.style.backgroundRepeat = 'no-repeat';
+});
